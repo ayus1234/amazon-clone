@@ -2,6 +2,8 @@
 
 This is a frontend clone of Amazon's e-commerce platform, built with HTML, CSS, and JavaScript. The project aims to replicate the core user interface and functionality of Amazon's website.
 
+ [View Live Demo](https://ayus1234.github.io/amazon-clone/)
+
 ## Features
 
 - Responsive design that works on desktop and mobile devices
