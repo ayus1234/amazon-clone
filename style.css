@@ -184,7 +184,6 @@ span {
     color: #007185;
 }
 
-
 .hero-msg a:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -205,6 +204,13 @@ span {
     background-color: white;
     padding: 20px 0px 15px;
     margin-top: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .box-img {
@@ -333,8 +339,93 @@ ul a:hover {
     font-size: 0.7rem;
 }
 
-
 .copyright {
     padding-top: 5px;
     font-size: 0.7rem;
+}
+
+/* Modern CSS Improvements */
+:root {
+    --primary-color: #0f1111;
+    --secondary-color: #febd68;
+    --hover-color: #f3a847;
+    --text-light: #cccccc;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    --primary-color: #232f3e;
+    --text-light: #ffffff;
+    background-color: #121212;
+    color: var(--text-light);
+}
+
+/* Cart badge */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Add to cart animation */
+.add-to-cart {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--hover-color);
+}
+
+.add-to-cart.added {
+    animation: addedToCart 1.5s ease;
+}
+
+@keyframes addedToCart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .nav-search {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .shop-section {
+        padding: 10px;
+    }
+    
+    .box {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-ops {
+        display: none;
+    }
+    
+    .box {
+        width: 100%;
+    }
 }
